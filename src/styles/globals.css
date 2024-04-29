@@ -50,3 +50,25 @@ body {
 .dark tspan{
   fill: white;
 }
+
+@media (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Enables momentum scrolling in iOS Safari */
+  }
+
+  th, td {
+    padding: 8px;
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+
+  th:first-child, td:first-child {
+    display: none; /* Hide first column in mobile view */
+  }
+
+  th, td {
+    min-width: 100px; /* Set minimum width for cells */
+  }
+}
